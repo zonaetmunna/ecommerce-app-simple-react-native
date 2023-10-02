@@ -1,6 +1,6 @@
 import React from 'react';
-import {Text as ReactNativeText, TextStyle} from 'react-native';
-import {presets, TextPresets} from './text.preset';
+import {Text as ReactNativeText} from 'react-native';
+import {presets} from './text.preset';
 
 export default function Text(props) {
     const {

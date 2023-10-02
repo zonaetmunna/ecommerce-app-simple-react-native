@@ -1,24 +1,22 @@
 // external imports
-import { ScrollView, View, Image, Pressable, Alert } from 'react-native';
 import React from 'react';
+import {Alert, Image, Pressable, ScrollView, View} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
-import {useSelector, useDispatch} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 // internal imports
-import Text from '../components/text/text';
-import {colors, spacing} from '../theme';
-import CounterButton from '../components/counter-button';
 import Button from '../components/button';
+import CounterButton from '../components/counter-button';
+import Text from '../components/text/text';
 import {
     addToCart,
     deleteFromCart,
+    reset,
     selectCart,
     selectTotalAmount,
-    reset,
 } from '../store/cartSlice';
-
+import {colors, spacing} from '../theme';
 
 export default function Cart() {
-
     const cart = useSelector(selectCart);
     const totalAmount = useSelector(selectTotalAmount);
     const dispatch = useDispatch();

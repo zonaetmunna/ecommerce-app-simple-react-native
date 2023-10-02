@@ -1,6 +1,5 @@
-import {View, StyleSheet, Image} from 'react-native';
 import React from 'react';
-import Text from './text/text';
+import {Image, StyleSheet, View} from 'react-native';
 import {colors} from '../theme';
 
 export default function BannerTitle() {

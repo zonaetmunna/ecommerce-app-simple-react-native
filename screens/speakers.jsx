@@ -1,14 +1,14 @@
-import {View, SafeAreaView, ScrollView, Image} from 'react-native';
 import React from 'react';
+import {Image, SafeAreaView, ScrollView, View} from 'react-native';
+import {useSelector} from 'react-redux';
 import Text from '../components/text/text';
-import {useDispatch, useSelector} from 'react-redux';
 import {selectSpeakers} from '../store/productSlice';
 
 import BannerTitle from '../components/banner-title';
-import CategoryTitle from '../components/category-title';
-import {spacing, colors} from '../theme';
 import Button from '../components/button';
+import CategoryTitle from '../components/category-title';
 import Footer from '../components/footer';
+import {colors, spacing} from '../theme';
 
 export default function Speakers({navigation}) {
     const speakers = useSelector(selectSpeakers);

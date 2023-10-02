@@ -1,24 +1,24 @@
-import {
-    View,
-    ActivityIndicator,
-    ScrollView,
-    Image,
-    useWindowDimensions,
-    Pressable,
-} from 'react-native';
+import {AntDesign} from '@expo/vector-icons';
 import React, {useEffect} from 'react';
-import Text from '../components/text/text';
+import {
+    ActivityIndicator,
+    Image,
+    Pressable,
+    ScrollView,
+    View,
+    useWindowDimensions,
+} from 'react-native';
+import {SafeAreaView} from 'react-native-safe-area-context';
 import {useDispatch, useSelector} from 'react-redux';
+import BannerTitle from '../components/banner-title';
+import Button from '../components/button';
+import Text from '../components/text/text';
 import {
     fetchProducts,
     selectFeaturedProducts,
     selectStatus,
 } from '../store/productSlice';
-import {SafeAreaView} from 'react-native-safe-area-context';
-import BannerTitle from '../components/banner-title';
 import {colors, spacing} from '../theme';
-import {AntDesign} from '@expo/vector-icons';
-import Button from '../components/button';
 
 const CategoryBox = ({title, image, onPress}) => {
     return (
@@ -127,8 +127,7 @@ const FeaturedProduct = ({name, category, image}) => {
     );
 };
 
-export default function Home({ navigation }) {
-    
+export default function Home({navigation}) {
     const dispatch = useDispatch();
     const status = useSelector(selectStatus);
     const featuredProducts = useSelector(selectFeaturedProducts);
@@ -223,4 +222,4 @@ export default function Home({ navigation }) {
             </ScrollView>
         </SafeAreaView>
     );
-};
+}

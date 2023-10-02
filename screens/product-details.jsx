@@ -1,22 +1,19 @@
 // external imports
-import React, { useState } from 'react';
-import {View, SafeAreaView, ScrollView, Pressable, Image} from 'react-native';
 import {Ionicons} from '@expo/vector-icons';
-import {useSelector, useDispatch} from 'react-redux';
+import React, {useState} from 'react';
+import {Image, Pressable, SafeAreaView, ScrollView, View} from 'react-native';
 import {showMessage} from 'react-native-flash-message';
+import {useDispatch, useSelector} from 'react-redux';
 // internal imports
 import BannerTitle from '../components/banner-title';
-import {colors, spacing} from '../theme';
-import Text from '../components/text/text';
-import {selectProductsById} from '../store/productSlice';
-import CounterButton from '../components/counter-button';
 import Button from '../components/button';
-import { addToCart } from '../store/cartSlice';
+import CounterButton from '../components/counter-button';
+import Text from '../components/text/text';
+import {addToCart} from '../store/cartSlice';
+import {selectProductsById} from '../store/productSlice';
+import {colors, spacing} from '../theme';
 
-
-
-export default function ProductDetails({ navigation, route }) {
-    
+export default function ProductDetails({navigation, route}) {
     const id = route.params.id;
     const product = useSelector((state) => selectProductsById(state, id));
     const {
@@ -39,8 +36,8 @@ export default function ProductDetails({ navigation, route }) {
                 message: 'You can not add 0 items',
                 type: 'danger',
             });
-        };
-        
+        }
+
         // create cart product
         const cartProduct = {
             id,

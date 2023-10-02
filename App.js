@@ -1,13 +1,13 @@
+import {useFonts} from 'expo-font';
 import {StatusBar} from 'expo-status-bar';
 import React from 'react';
-import {SafeAreaProvider, SafeAreaView} from 'react-native-safe-area-context';
-import {useFonts} from 'expo-font';
 import FlashMessage from 'react-native-flash-message';
+import {SafeAreaProvider} from 'react-native-safe-area-context';
 import {Provider} from 'react-redux';
-import store from './store';
-import Navigation from './navigation';
-import {PersistGate} from 'redux-persist/integration/react';
 import {persistStore} from 'redux-persist';
+import {PersistGate} from 'redux-persist/integration/react';
+import Navigation from './navigation';
+import store from './store';
 
 let persistor = persistStore(store);
 

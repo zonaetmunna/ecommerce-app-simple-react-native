@@ -1,6 +1,12 @@
+import {
+    Ionicons,
+    MaterialCommunityIcons,
+    SimpleLineIcons,
+} from '@expo/vector-icons';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {NavigationContainer, DefaultTheme} from '@react-navigation/native';
+import {DefaultTheme, NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {useSelector} from 'react-redux';
 import Cart from '../screens/cart';
 import Checkout from '../screens/checkout';
 import Earphones from '../screens/earphones';
@@ -8,14 +14,8 @@ import Headphones from '../screens/headphones';
 import Home from '../screens/home';
 import Details from '../screens/product-details';
 import Speakers from '../screens/speakers';
-import {colors} from '../theme';
-import {
-    Ionicons,
-    MaterialCommunityIcons,
-    SimpleLineIcons,
-} from '@expo/vector-icons';
-import {useSelector} from 'react-redux';
 import {selectCartLength} from '../store/cartSlice';
+import {colors} from '../theme';
 
 const THEME = {
     ...DefaultTheme,

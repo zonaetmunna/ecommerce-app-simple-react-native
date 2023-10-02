@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, StyleSheet, Pressable} from 'react-native';
+import {Pressable, StyleSheet, View} from 'react-native';
 import {colors} from '../theme';
 import Text from './text/text';
 
